@@ -1,20 +1,23 @@
+import Navbar from "../components/Navbar";
+
 import "../assets/styles/globals.css";
 
 export const metadata = {
-  title: "Quest",
+  title: "Quest | Enjoy your Stay",
   description:
-    "Quest is an app made with nextjs & tailwind css for helping travellers travel acrosss the beautiful landcapes of the world",
-  keywords: "quest , travel , holiday",
+    "Quest is a platform that helps users find rental spaces in popular locations",
+  keywords: "Holiday , India ,Quest",
 };
 
-const MainLayout = ({ children }) => {
+const HomeLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <div>{children}</div>
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   );
 };
 
-export default MainLayout;
+export default HomeLayout;

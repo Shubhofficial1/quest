@@ -1,12 +1,10 @@
-import Link from "next/link";
 import React from "react";
 
 const HomePage = () => {
   return (
-    <div>
-      Home Page
-      <Link href={"/properties/add"}>Add Property</Link>
-    </div>
+    <>
+      <h1>Home Page</h1>
+    </>
   );
 };
 
