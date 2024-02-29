@@ -1,9 +1,12 @@
 import React from "react";
+import Hero from "../components/Hero";
+import InfoBoxes from "../components/InfoBoxes";
 
 const HomePage = () => {
   return (
     <>
-      <h1>Home Page</h1>
+      <Hero />
+      <InfoBoxes />
     </>
   );
 };
