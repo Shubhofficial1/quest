@@ -30,6 +30,7 @@ const PropertyCard = ({ property }) => {
         sizes="100vw"
         width={0}
         height={0}
+        priority
       />
       <div className="p-4">
         <div className="mb-6 text-left md:text-center lg:text-left">
