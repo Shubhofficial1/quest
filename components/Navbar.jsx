@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "../assets/images/logo.png";
-import ProfileDefault from "../assets/images/profile.png";
+import Logo from "@/assets/images/logo.png";
+import ProfileDefault from "@/assets/images/profile.png";
 import { FaGoogle } from "react-icons/fa";
 
 const Navbar = () => {
@@ -54,7 +54,7 @@ const Navbar = () => {
               <Image className="w-auto h-10" src={Logo} alt="PropertyPulse" />
 
               <span className="hidden ml-2 text-2xl font-bold text-white md:block">
-                PropertyPulse
+                Quest
               </span>
             </Link>
             {/* <!-- Desktop Menu Hidden below md screens --> */}
