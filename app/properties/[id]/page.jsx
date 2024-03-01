@@ -41,6 +41,7 @@ const PropertyDetailsPage = () => {
   }
   return (
     <>
+      {loading && <Spinner />}
       {!loading && property && (
         <>
           <PropertyHeaderImage image={property.images[0]} />
