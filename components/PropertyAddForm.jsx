@@ -15,7 +15,7 @@ const PropertyAddForm = () => {
     beds: "3",
     baths: "2",
     square_feet: "1800",
-    amenities: ["Free Parking"],
+    amenities: [],
     rates: {
       weekly: "",
       monthly: "2000",
@@ -95,7 +95,7 @@ const PropertyAddForm = () => {
   };
 
   return (
-    <form>
+    <form action="/api/properties" method="POST" encType="multipart/form-data">
       <h2 className="mb-6 text-3xl font-semibold text-center">Add Property</h2>
 
       <div className="mb-4">
@@ -489,7 +489,7 @@ const PropertyAddForm = () => {
         <input
           type="text"
           id="seller_name"
-          name="seller_info.name."
+          name="seller_info.name"
           className="w-full px-3 py-2 border rounded"
           placeholder="Name"
           value={fields.seller_info.name}
@@ -543,6 +543,7 @@ const PropertyAddForm = () => {
           className="w-full px-3 py-2 border rounded"
           accept="image/*"
           multiple
+          required
           onChange={handleImageChange}
         />
       </div>
