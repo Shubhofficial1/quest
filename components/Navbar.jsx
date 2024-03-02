@@ -80,7 +80,6 @@ const Navbar = () => {
                 >
                   Home
                 </Link>
-
                 <Link
                   href="/properties"
                   className={`${
@@ -110,11 +109,12 @@ const Navbar = () => {
             <div className="hidden md:block md:ml-6">
               <div className="flex items-center">
                 {providers &&
-                  Object.values(providers).map((provider) => (
+                  Object.values(providers).map((provider, index) => (
                     <button
                       onClick={() => {
                         signIn(provider.id);
                       }}
+                      key={index}
                       className="flex items-center px-3 py-2 text-white bg-gray-700 rounded-md hover:bg-gray-900 hover:text-white"
                     >
                       <FaGoogle className="mr-2 text-white" />
@@ -198,6 +198,9 @@ const Navbar = () => {
                       role="menuitem"
                       tabIndex={-1}
                       id="user-menu-item-0"
+                      onClick={() => {
+                        setIsProfileMenuOpen(!isProfileMenuOpen);
+                      }}
                     >
                       Your Profile
                     </Link>
@@ -207,6 +210,9 @@ const Navbar = () => {
                       role="menuitem"
                       tabIndex={-1}
                       id="user-menu-item-1"
+                      onClick={() => {
+                        setIsProfileMenuOpen(!isProfileMenuOpen);
+                      }}
                     >
                       Saved Properties
                     </Link>
@@ -215,6 +221,10 @@ const Navbar = () => {
                       role="menuitem"
                       tabIndex={-1}
                       id="user-menu-item-2"
+                      onClick={() => {
+                        setIsProfileMenuOpen(!isProfileMenuOpen);
+                        signOut();
+                      }}
                     >
                       Sign Out
                     </button>
