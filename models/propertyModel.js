@@ -80,6 +80,7 @@ const PropertySchema = new mongoose.Schema(
     is_featured: {
       type: Boolean,
       required: true,
+      default: false,
     },
   },
   {

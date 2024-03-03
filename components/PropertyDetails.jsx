@@ -78,17 +78,20 @@ const PropertyDetails = ({ property }) => {
         <p className="mb-4 text-center text-gray-500">{property.description}</p>
       </div>
 
-      <div className="p-6 mt-6 bg-white rounded-lg shadow-md">
-        <h3 className="mb-6 text-lg font-bold">Amenities</h3>
+      {property.amenities && (
+        <div className="p-6 mt-6 bg-white rounded-lg shadow-md">
+          <h3 className="mb-6 text-lg font-bold">Amenities</h3>
 
-        <ul className="grid grid-cols-1 list-none md:grid-cols-2 lg:grid-cols-3">
-          {property.amenities.map((amenity, index) => (
-            <li key={index} className="flex">
-              <FaCheck className="mr-2 text-green-600" /> {amenity}
-            </li>
-          ))}
-        </ul>
-      </div>
+          <ul className="grid grid-cols-1 list-none md:grid-cols-2 lg:grid-cols-3">
+            {property.amenities.map((amenity, index) => (
+              <li key={index} className="flex">
+                <FaCheck className="mr-2 text-green-600" /> {amenity}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="p-6 mt-6 bg-white rounded-lg shadow-md">
         <div id="map"></div>
       </div>
